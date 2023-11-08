@@ -13,8 +13,6 @@ class Solution {
                 temp++;
             }
         }
-        else{
             return;
-        }
     }
 }
