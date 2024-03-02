@@ -1,11 +1,13 @@
 class Solution(object):
     def check(self, nums):
         count = 0
-        length = len(nums) - 1
-        for i in range (0,length):
-            if nums[i] > nums[i+1]:
+        n = len(nums)
+        for i in range(1, n):
+            if nums[i - 1] > nums[i]:
                 count += 1
-        if count > 1 or (count == 1 and nums[0] < nums[length]):
+        if count > 1:
+            return False
+        if nums[n - 1] > nums[0] and count != 0:
             return False
         return True
         """
